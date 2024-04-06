@@ -17,7 +17,7 @@ export async function onRequestGet(context) {
   if (path.startsWith("_$flaredrive$/thumbnails/")){
     headers.set("Cache-Control", "max-age=31536000");
   }
-
+  headers.set("Cache-Control", "max-age=31536000");
   return new Response(response.body, {
     headers: headers,
     status: response.status,
